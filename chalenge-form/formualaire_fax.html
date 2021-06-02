@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulaire_fax</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="formulaire_fax.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../fivecon/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <video id="video_bg" controls>
+      <source src="/DJ_glebich_milkinside.webm" type="video/webm" />
+
+      <source src="DJ_glebich_milkinside.mp4" type="video/mp4" />
+
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+
+    <!-- Deux methodes d'envoi sont passibles :
+        le get transmet l'info dans l'url, c'est à proscrire dans la majorité des cas car trop faible en securisation
+        le post transmet l'information de manière plus securisée puisque invisible en dehors de votre serveur
+
+        Action definit l'action a mener suite a la validation : cad la page vers laquelle la validation nous envoie, ici la meme page apres rechargement.
+    -->
+    <div class="conteneur_inscription">
+      <h2>Formulaire d'inscription</h2>
+      <form method="POST" action="#">
+        <p>
+          <label for="id-nom">Nom (obligatoire)</label>
+          <input
+            type="text"
+            name="nom"
+            id="id-nom"
+            required
+            placeholder="Votre nom ..."
+          />
+        </p>
+        <p>
+          <label for="id-mdp">Mot de passe</label>
+          <input
+            type="password"
+            name="mdp"
+            id="id-mdp"
+            placeholder="mot de passe"
+            minlength="4"
+            maxlength="12"
+          />
+        </p>
+        <p>
+          <label for="id-email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="id-email"
+            placeholder="Votre E-mail"
+          />
+        </p>
+        <p>
+          <label for="id-anniv">Anniversaire</label>
+          <input type="date" name="anniv" id="id-anniv" />
+        </p>
+        <p>
+          <label for="id-pays">Pays</label>
+          <select name="pays" id="id-pays">
+            <option disabled selected>Pays...</option>
+            <optgroup label="Europe">
+              <option value="fr">France</option>
+              <option value="it">Italie</option>
+              <option value="es">Espagne</option>
+            </optgroup>
+            <optgroup label="Asie">
+              <option value="ch">Chine</option>
+              <option value="la">Laos</option>
+              <option value="ca">Cambodge</option>
+            </optgroup>
+          </select>
+        </p>
+        <p>
+          <label for="id-choix">Quels sont vos fruits préférés ?</label>
+          <input type="checkbox" name="choix" value="orange" />Orange
+          <input type="checkbox" name="choix" value="pomme" />Pomme
+          <input type="checkbox" name="choix" value="fraise" checked />Fraise
+        </p>
+        <p>
+          <label>Genre</label>
+          <input type="radio" name="genre" value="f" checked />Femme
+          <input type="radio" name="genre" value="h" />Homme
+          <input type="radio" name="genre" value="n" />Non binaire
+        </p>
+        <p>
+          <label for="id-ville">Ville</label>
+          <input type="text" name="ville" id="id-ville" list="france" />
+          <datalist id="france">
+            <option>Paris</option>
+            <option>Lyon</option>
+            <option>Lille</option>
+            <option>Nice</option>
+            <option>Perpignan</option>
+          </datalist>
+        </p>
+        <!-- ------------ Input type number ------------
+            type number n'est pas utilisée par tous les navigateurs, nous pouvons opter pour un type="text" en y ajoutant les restrictions dans pattern. Le title permet alors d'ajouter un message supplémentaire au message d'erreur.-->
+        <p>
+          <label for="id-cp">Code Postal</label>
+          <input type="number" name="cp" id="id-cp" />
+          <!-- ------- Input type text avec motif (pattern+ expression reguliere) ------- -->
+          <input
+            type="text"
+            name="cp2"
+            id="id-cp2"
+            pattern="[0-9]{5}"
+            title="5 chiffres requis de 0 à 9"
+          />
+        </p>
+        <p>
+          <!-- <label for="id-adress">Adresse</label> -->
+          <textarea
+            name="adresse"
+            id="id-adress"
+            rows="10"
+            cols="15"
+            placeholder="Adresse"
+          ></textarea>
+        </p>
+        <p>
+          <input class="btn" type="submit" name="validation" value="Valider" />
+          <input class="btn" type="reset" name="efface" value="Recommencer" />
+        </p>
+      </form>
+    </div>
+    <div class="conteneur_recherche">
+      <h2>Formulaire de recherche</h2>
+      <!--
+            resultat visible dans l'url vers la meme page
+            un champ de saisie texte a remplir obligatoirement et un bouton 'rechercher' -->
+      <form method="POST" action="#">
+        <p>
+          <input
+            type="text"
+            name="recherche"
+            id="id-recherche"
+            required
+            placeholder="Recherche"
+          />
+          <input
+            class="search"
+            type="submit"
+            name="validation"
+            value="Rechercher"
+            required
+            placeholder="Recherche"
+          />
+        </p>
+      </form>
+    </div>
+    <div class="conteneur_contact">
+      <h2>Formulaire de contact</h2>
+      <!-- 
+            Resultat caché vers la meme page
+            un bouton radio pour specifier mr ou mme
+            un champ de saisie pour le nom de l'expediteur
+            un champ pour son email
+            un champ pour son objet
+            un champ de saisie pour le contenu de son mail
+            une case a cocher d'acceptation des condiditions de confidentialité
+            Un bouton 'annuler' et un bouton 'envoyer'
+            tous les champs sont a remplir
+        
+        -->
+      <form method="POST" action="#">
+        <p>
+          <input type="radio" name="genre" value="mme" required checked />Madame
+          <input type="radio" name="genre" value="mr" required />Monsieur
+        </p>
+        <p>
+          <label for="id-name">Nom</label>
+          <input
+            type="text"
+            name="name"
+            id="id-name"
+            required
+            placeholder="Votre nom"
+          />
+        </p>
+        <p>
+          <label for="id-email">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="id-email"
+            required
+            placeholder="Votre mail"
+          />
+        </p>
+        <p>
+          <label for="id-objet">Objet</label>
+          <input
+            type="text"
+            name="objet"
+            id="id-objet"
+            required
+            placeholder="Objet"
+          />
+        </p>
+        <p>
+          <textarea
+            name="Message"
+            id="id-message"
+            cols="30"
+            rows="10"
+            required
+            placeholder="Message"
+          ></textarea>
+        </p>
+        <p>
+          <input
+            type="checkbox"
+            id="id-checkbox"
+            name="scales"
+            required
+            checked
+          />
+          <label for="id-checkbox"
+            >J'accepte les conditions de confidentialité?</label
+          >
+        </p>
+        <p>
+          <input class="btn" type="submit" name="validation" value="Envoyer" />
+          <input class="btn" type="reset" name="annuler" value="Annuler" />
+        </p>
+      </form>
+
+      <button class="pushable">
+        <span class="front"> Envoyer </span>
+      </button>
+    </div>
+  </body>
+</html>

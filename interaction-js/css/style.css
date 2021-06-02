@@ -1,0 +1,48 @@
+/*********************************
+********* NE PAS MODIFIER ********
+**********************************/
+:root{
+    --box-shadow-light :0px 5px 10px 0px rgba(150,150,150,.8);
+}
+body{
+    width: 800px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: .3rem;
+}
+h2{
+    color: #3498db;
+    
+}
+section{
+    padding: 20px 40px 40px 40px;
+    margin: 10px; 
+    border: 1px solid #34495e;
+    box-shadow: var(--box-shadow-light);
+}
+#exo1Div{ 
+    width: 150px; 
+    height: 150px; 
+    background-color: #3498db;
+    margin-bottom:20px ;
+}
+#exo2Logo{
+    width: 100px;
+}
+#consigne{
+    background-color: #3498db;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.5rem;
+    padding: 20px 40px 20px 40px;
+}
+#consigne a{
+    color: #34495e;
+}
+#consigne a:hover{
+    color: #e74c3c;
+}

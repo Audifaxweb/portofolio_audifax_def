@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* background: #fff5ee; */
+  /* background-image: url(DJ_glebich_milkinside.mp4);
+  background-repeat: no-repeat; */
+  /* width: 100%; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* margin: 50 auto; */
+}
+#video_bg {
+  /* z-index: 2; */
+  width: 100%;
+  height: 100%;
+  background-position: fixed;
+}
+textarea {
+  width: 70%;
+  height: 150px;
+  resize: none;
+  border: 2px solid #b1bceb;
+  border-radius: 5px;
+}
+[type='text'],
+[type='email'],
+[type='date'],
+[type='password'],
+[type='number'],
+[type='submit'] {
+  /* outline: 2px solid rgb(167, 167, 228); */
+  border: 2px solid #b1bceb;
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+  /* border-radius: 15px; */
+}
+[type='reset'] {
+  border: 2px solid #b1bceb;
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+}
+#id-pays {
+  /* outline: 2px solid blue; */
+  border: 2px solid #b1bceb;
+  width: 300px;
+  height: 30px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+  font-size: 15px;
+}
+.conteneur_inscription,
+.conteneur_recherche,
+.conteneur_contact {
+  width: 480px;
+  /* border: 1px solid #5607e9; */
+  box-shadow: 12px 7px 7px black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background: #f1f1f1;
+  margin-left: 950px;
+  border-radius: 10px;
+  padding: 20px 40px 20px 40px;
+}
+
+.conteneur_inscription {
+  margin-bottom: 20px;
+  width: 700px;
+  position: absolute;
+  top: 244px;
+  left: -773px;
+}
+.conteneur_recherche {
+  margin-bottom: 20px;
+  width: 600px;
+  position: absolute;
+  top: 244px;
+  right: 861px;
+}
+.conteneur_contact {
+  margin-bottom: 20px;
+  position: absolute;
+  top: 244px;
+  right: 177px;
+}
+
+h2 {
+  color: rgb(12, 12, 12);
+  margin-bottom: 10px;
+}
+
+form {
+  text-align: center;
+  justify-content: space-between;
+}
+.btn {
+  /* width: 150px; */
+  height: 35px;
+  background-color: hsl(180, 91%, 45%);
+  box-shadow: 10px 5px 5px black;
+  color: rgb(12, 12, 12);
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.search {
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  background-color: hsl(180, 91%, 45%);
+  border-radius: 9px;
+  color: rgb(12, 12, 12);
+  box-shadow: 10px 5px 5px black;
+  font-weight: bold;
+}
+label {
+  font-weight: bold;
+}
+::placeholder {
+  font-size: 15px;
+}
+.pushable {
+  background: hsl(340deg 100% 32%);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+.front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: hsl(345deg 100% 47%);
+  color: white;
+  transform: translateY(-6px);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}

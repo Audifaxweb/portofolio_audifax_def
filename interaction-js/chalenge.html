@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP JS - Intéraction</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header> 
+        <h1>TP JS - Intéraction</h1>
+    </header>
+    <section id="consigne">
+        <p>Faire les exercices directement dans le fichier JS sans toucher au fichier CSS.</p>
+    </section>
+
+    <!------------- 1er Exercice - 5pts ---------------->
+    <section>
+        <h2>1er Exercice - 5pts</h2>
+        <p>Faites en sorte que lorsque l'on clique sur le bouton "change", la div bleu devienne verte</p>
+        <p><strong>Attention :</strong> ne pas utiliser de classe CSS, vous devez modifier le style de la div directement en JS sans toucher au fichier css</p>
+        <div id="exo1Div"></div>
+        <button id="exo1Btn">Change</button>
+    </section>
+
+
+    <!------------- 2e Exercice - 5pts ---------------->
+    <section>
+        <h2>2e Exercice - 5pts</h2>
+        <p>Faire en sorte que lorsque l'on clique sur l'image, celle ci 
+        augmente de taille à raison de 20 pixels à chaque clic.</p>
+        <p><strong>Attention :</strong> ne pas utiliser de classe CSS, vous devez modifier la taille de l'image directement en JS sans toucher au fichier css</p>
+        <p>Aide : voir getComputedStyle (attention retourne une chaine de caractère)</p>
+        <p>Pensez à remettre 'px' ensuite en utilisant la concaténation</p>
+        <img src="img/logojs.png" alt="logo JS" id="exo2Logo">
+    </section>
+
+
+
+    <!------------- 3e Exercice - 5pts ---------------->
+    <section id="exo3">
+        <h2>3e Exercice - 5pts</h2>
+        <p>Faire en sorte que lorsque l'input color est modifié, le background de la section qui a pour id="exo3", change en fonction de la couleur choisie</p>
+        <p><strong>Attention :</strong> ne pas utiliser de classe CSS, vous devez faire les modifications directement en JS sans toucher au fichier css</p>
+        <input type="color" name="" id="exo3Input">
+    </section>
+
+
+    <!------------- 4e Exercice - 5pts ---------------->
+    <section>
+        <h2>4e Exercice - 5pts</h2>
+        <p>let etudiants = ['Anne', 'Audifax', 'Baptiste', 'Jean-François', 'Jordan', 'Julie', 'Kamel', 'Laure', 'Marie', 'Michaël', 'Raphaël', 'Rémy', 'Sonia', 'Sylvain', 'Nicolas'];</p>
+
+        <p>A/ Soit le tableau précedent, grâce à une boucle, afficher les éléments 1 par 1 dans la console</p>
+
+        <p>B/ Grâce à une fonction prédefinie, supprimer votre prénom du tableau, et réafficher les éléments 1 par 1 dans la console</p>
+    </section>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

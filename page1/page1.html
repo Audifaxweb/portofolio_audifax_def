@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Audifax</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style_page1.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../fivecon/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <button id="boutton_ancre">
+      <a href="../onepage_index/index_onepage.html"
+        ><img src="img/arrow-circle-left-solid.svg" alt=""
+      /></a>
+    </button>
+    <header>
+      <h1>Mes Projets</h1>
+    </header>
+    <main>
+      <div class="container">
+        <nav>
+          <ul id="filters">
+            <li><a href="#" class="active" data-filter="*">Tout</a></li>
+            <li><a href="#" data-filter="logo">Chalenges interface</a></li>
+            <li><a href="#" data-filter="web">Chalenge photoshop</a></li>
+            <li><a href="#" data-filter="print">Autres</a></li>
+          </ul>
+        </nav>
+
+        <div class="gallery">
+          <div class="imageGallery logo">
+            <img src="img/image_page_index.png" alt="" />
+            <div class="blocTitreGallery">
+              <h3>Praudif Musique</h3>
+              <h6>Site dynamique</h6>
+            </div>
+          </div>
+
+          <div class="imageGallery web">
+            <img src="img/image_page_home.png" alt="" />
+            <div class="blocTitreGallery">
+              <h3>Home Page</h3>
+              <h6>Praudif musique</h6>
+            </div>
+          </div>
+
+          <div class="imageGallery print">
+            <img src="img/communication-croisière.jpg" alt="" />
+            <div class="blocTitreGallery">
+              <h3>Exo Ifocop</h3>
+              <h6>TP de formation</h6>
+            </div>
+          </div>
+
+          <div class="imageGallery logo">
+            <img src="img/pic04.jpg" alt="" />
+            <div class="blocTitreGallery">
+              <h3>Client Name</h3>
+              <h6>Lorem, ipsum.</h6>
+            </div>
+          </div>
+
+          <div class="imageGallery web">
+            <img src="img/pic05.jpg" alt="" />
+            <div class="blocTitreGallery">
+              <h3>Client Name</h3>
+              <h6>Lorem, ipsum.</h6>
+            </div>
+          </div>
+
+          <div class="imageGallery web">
+            <img src="img/pic06.jpg" alt="" />
+            <div class="blocTitreGallery">
+              <h3>Client Name</h3>
+              <h6>Lorem, ipsum.</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="modal" class="hide">
+      <div class="imageModal">
+        <img src="" alt="" />
+        <span>X</span>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
